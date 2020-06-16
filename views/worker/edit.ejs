@@ -1,0 +1,38 @@
+
+<form action="/dashboard/edit" method="post">
+    <h2 class="page-header" style="color:orangered;">Edit Profile</h2>
+
+    <br>
+    <br>
+
+    <div class="form-row">
+      <div class="form-item">
+          <label style="color:whitesmoke;">Phone Number</label>
+          <input type="number" name="mobno" value="<%= phonenumber%>">
+      </div>
+  
+      <div class="form-item">
+          <label style="color:whitesmoke;">Works Known</label>
+          <input type="text" name="work" value="<%= worksknown%>">
+      </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-item">
+        <label style="color:whitesmoke;">Active</label>
+        <input type="text" name="active" value="<%= active%>">
+    </div>
+
+    <div class="form-item">
+        <label style="color:whitesmoke;">Photo</label>
+        <input type="file" name="cover" class="filepond" value="<%= photo%>" data-type="local">
+    </div>
+</div>
+
+
+  
+  <div class="form-row form-row-end btn-row">
+    <a class="btn btn-danger" href="/dashboard">Cancel</a>
+  <button  class="btn btn-primary" type="submit">Update</button>
+  </div>
+</form>

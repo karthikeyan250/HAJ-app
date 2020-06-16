@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Landing Page</title>
+</head>
+<body>
+    <section class=" section section-top">
+        <div class="content rellax" data-rellax-speed="5">
+            <h1>Welcome to HAJ </h1>
+            <br>
+            <h4 class="ml11"  >
+                <span class="text-wrapper">
+                  <span class="line line1"></span>
+                  <span class="letters" style="color:goldenrod;">A place you can hire workers </span>
+                </span>
+              </h4>
+            
+        </div>
+    </section>
+
+    <section class=" section section-stream">
+        <img src="https://i.ibb.co/TvdbMhQ/play-button.png" alt="" class="play rellax" data-rellax-speed="1" data-rellax-xs-speed="-5">
+
+        <div class="content rellax" data-rellax-speed="10">
+            <div>
+                <h2 class="secondary-text">OUR SERVICES</h2>
+                <p>Two Wheeler Mechanic , Four Wheeler Mechanic , Electrician , Plumber and Home maid</p>
+            </div>
+            <div>
+                <h2 class="secondary-text">WE PROMISE YOU</h2>
+                <p>that you will get quality workers with excellent skill in their field</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-grid">
+        <div class="rellax"  data-rellax-speed="1" data-rellax-xs-speed="3">
+            <a href="#"> <i class="fas fa-tools fa-3x secondary-text" ></i>
+            <h2>Plumber <span class="secondary-text dot">.</span></h2> 
+        </div></a>
+
+        <div  class="rellax"  data-rellax-speed="3" data-rellax-xs-speed="3">
+            <a href="#"> <i class="fas fa-plug fa-3x secondary-text" ></i>
+            <h2>Electrician <span class="secondary-text dot">.</span></h2>    
+        </div></a>
+
+        <div class="rellax"  data-rellax-speed="5" data-rellax-xs-speed="3">
+            <a href="#"> <i class="fas fa-people-carry fa-3x secondary-text" ></i>
+            <h2>Home maid <span class="secondary-text dot">.</span></h2> 
+        </div></a>
+
+        <div class="rellax"  data-rellax-speed="7" data-rellax-xs-speed="3">
+            <a href="#"> <i class="fas fa-car-alt fa-3x secondary-text"></i>            
+            <h2>Four Wheeler Mechanic <span class="secondary-text dot">.</span></h2>           
+        </div></a>
+
+         <div class="rellax" data-rellax-speed="9" data-rellax-xs-speed="3">
+            <a href="#"> <i class="fas fa-motorcycle fa-3x secondary-text"></i>
+            <h2>Two Wheeler Mechanic <span class="secondary-text dot">.</span></h2>
+        </div></a>
+    </section>
+
+    <footer class="footer">
+        <ul>
+          <li><a href="#">Faq</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha256-+xf9aJnHocnmrigq2hIDJGBSAnJdF5NH+Ooe5J2PHiI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    
+    <script>
+        let rellax = new Rellax('.rellax');
+    </script>
+
+
+    <script>
+        var textWrapper = document.querySelector('.ml11 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 780,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 10000
+  });
+    </script>
+</body>
+</html>

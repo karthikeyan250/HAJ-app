@@ -1,0 +1,31 @@
+
+<header>
+    <nav class="header-nav">
+        <h4 class ="header-title mt-4" >Welcome to HAJ  <%=  name%></h4>
+        <ul>
+            <li><h3 !style="color:crimson; "><a href="/dashboard/edit">Edit Profile</a></h3></li>
+            <li><h3 !style="color:crimson;"><a href="#">Orders</a></h3></li>
+        </ul>
+    </nav>
+</header>
+<p class="lead mb-3"></p>
+<h2 class="mt-4" style="color:blueviolet;font-size:46px;" >You have miles to go before You sleep...so keep active to achieve your dream</h2>
+<br>
+<br>
+<form action="/dashboard" method="post">
+    <div class="form-row">
+        <div class="form-item">
+            <label class="page-header" style="color:orangered;">Active</label>
+            <br>
+            <Select name="active">
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>           
+            </Select>
+            <br>  
+            <button type="submit" class="btn btn-primary btn-block">Update</button>
+        </div>
+    </div>
+</form>
+<br>
+
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
